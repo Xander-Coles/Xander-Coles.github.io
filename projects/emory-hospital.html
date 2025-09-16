@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emory University Hospital Midtown — Stocked for Success</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    :root{--bg-dark:#0a0a0a;--bg-secondary:#121212;--text-primary:#fff;--text-secondary:#a0a0a0;--accent-green:#00ff88;--accent-yellow:#ffeb3b;--border-color:#2b2b2b}
+    body{background:var(--bg-dark);color:var(--text-primary);font-family:Inter,system-ui,Arial,sans-serif;line-height:1.7;margin:0}
+    nav{position:sticky;top:0;background:rgba(10,10,10,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border-color);z-index:10}
+    .nav-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+    .nav-links{list-style:none;display:flex;gap:22px;margin:0;padding:0}
+    .nav-links a{color:var(--text-secondary);text-decoration:none;text-transform:uppercase;font-size:14px;letter-spacing:1px}
+    .nav-links a:hover{color:var(--accent-green)}
+    .wrap{max-width:1100px;margin:0 auto;padding:90px 20px}
+    h1{font-size:2.2rem;margin:0 0 6px;background:linear-gradient(135deg,var(--accent-yellow),var(--accent-green));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+    .sub{color:var(--text-secondary);margin-bottom:20px}
+    .hero{border:1px solid var(--border-color);border-radius:16px;overflow:hidden;background:var(--bg-secondary)}
+    .hero img, .hero iframe{display:block;width:100%;height:auto}
+    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;margin-top:22px}
+    .card{background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:16px;padding:18px}
+    h2{font-size:1.25rem;color:var(--accent-yellow);margin-bottom:10px}
+    .links a{display:inline-block;margin:6px 8px 0 0;padding:10px 14px;border:1px solid var(--accent-green);border-radius:14px;text-decoration:none;color:var(--accent-green)}
+    .links a:hover{background:var(--accent-green);color:#0a0a0a}
+    @media (max-width: 860px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">XC</div>
+      <ul class="nav-links">
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#work">Work</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="wrap">
+    <h1>Emory University Hospital Midtown — Stocked for Success</h1>
+    <div class="sub">Data-driven inventory management to reduce room downtime and improve parts availability.</div>
+    <div class="hero"><img src="../assets/img/emory-poster.jpeg" alt="Emory poster preview"></div>
+    <div class="grid">
+      <section class="card">
+        <h2>Overview</h2>
+        <p>We designed a continuous-review inventory policy and a digitized parts catalog/dashboard for the Facilities stockroom (serving 600+ beds across 28 specialties). Targeted untracked items and stockouts delaying work-order completion and room availability.</p>
+        <h2>Highlights</h2>
+        <ul>
+          <li>(Q,r) policy with safety stock for critical SKUs.</li>
+          <li>Barcode-based checkout and searchable parts catalog.</li>
+          <li>Dashboards for par levels, order queues, and usage trends.</li>
+        </ul>
+        <h2>Impact</h2>
+        <ul>
+          <li>Projected multi-million dollar annual savings through reduced downtime.</li>
+          <li>Higher stock accuracy and faster work-order cycle times.</li>
+        </ul>
+      </section>
+      <aside class="card">
+        <h2>Links</h2>
+        <div class="links">
+          <a href="/assets/img/emory-poster.jpeg" target="_blank" rel="noopener">Poster (JPEG)</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
