@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Market Shocks - Risk-Averse Portfolio Optimization</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    :root{--bg-dark:#0a0a0a;--bg-secondary:#121212;--text-primary:#fff;--text-secondary:#a0a0a0;--accent-green:#00ff88;--accent-yellow:#ffeb3b;--border-color:#2b2b2b}
+    body{background:var(--bg-dark);color:var(--text-primary);font-family:Inter,system-ui,Arial,sans-serif;line-height:1.7;margin:0}
+    nav{position:sticky;top:0;background:rgba(10,10,10,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border-color);z-index:10}
+    .nav-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+    .logo{font-weight:800;letter-spacing:1px}
+    .nav-links{list-style:none;display:flex;gap:22px;margin:0;padding:0}
+    .nav-links a{color:var(--text-secondary);text-decoration:none;text-transform:uppercase;font-size:14px;letter-spacing:1px}
+    .nav-links a:hover{color:var(--accent-green)}
+    .wrap{max-width:1100px;margin:0 auto;padding:90px 20px}
+    h1{font-size:2.2rem;margin:0 0 6px;background:linear-gradient(135deg,var(--accent-yellow),var(--accent-green));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+    .sub{color:var(--text-secondary);margin-bottom:20px}
+    .hero{border:1px solid var(--border-color);border-radius:16px;overflow:hidden;background:var(--bg-secondary)}
+    .hero img{display:block;width:100%;height:auto}
+    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;margin-top:22px}
+    .card{background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:16px;padding:18px}
+    h2{font-size:1.25rem;color:var(--accent-yellow);margin-bottom:10px}
+    p,li{color:var(--text-secondary)}
+    ul{margin:8px 0 0 20px;padding:0}
+    .metric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+    .metric{border:1px solid var(--border-color);border-radius:14px;padding:12px;background:#0f0f0f}
+    .metric strong{display:block;color:var(--accent-green);font-size:1.2rem;margin-bottom:2px}
+    .metric span{color:var(--text-secondary);font-size:.92rem}
+    .links a{display:inline-block;margin:6px 8px 0 0;padding:10px 14px;border:1px solid var(--accent-green);border-radius:14px;text-decoration:none;color:var(--accent-green)}
+    .links a:hover{background:var(--accent-green);color:#0a0a0a}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+    .tag{border:1px solid var(--accent-green);color:var(--accent-green);border-radius:12px;padding:3px 8px;font-size:.85rem}
+    @media (max-width: 860px){.grid{grid-template-columns:1fr}.metric-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">XC</div>
+      <ul class="nav-links">
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#work">Work</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="wrap">
+    <h1>Market Shocks - Risk-Averse Portfolio Optimization</h1>
+    <div class="sub">Conditional Neural Spline Flow scenarios for Mean-CVaR portfolio construction under market stress.</div>
+    <div class="hero"><img src="../assets/img/market-shocks-preview.png" alt="Market Shocks calibration preview"></div>
+    <div class="grid">
+      <section class="card">
+        <h2>Overview</h2>
+        <p>Built a calibration-centered portfolio risk model that replaces a static Gaussian scenario generator with a conditional Neural Spline Flow trained on ten years of S&amp;P 500 daily returns. The model uses VIX as a market-fear context signal and supports Mean-CVaR optimization for a 30-stock portfolio.</p>
+        <h2>Outcome</h2>
+        <ul>
+          <li>Diagnosed why a baseline flow still failed in crisis regimes: collapsed correlations, under-estimated volatility, and too-narrow predictive intervals.</li>
+          <li>Added a PCA projection and rolling pairwise-correlation context channel to restore crisis calibration.</li>
+          <li>Showed that calibration, not headline Sharpe, was the real improvement for downstream risk-aware optimization.</li>
+        </ul>
+        <div class="metric-grid">
+          <div class="metric"><strong>20% -> 80%</strong><span>Crisis predictive interval coverage</span></div>
+          <div class="metric"><strong>5.3x -> 1.3x</strong><span>Volatility under-estimation factor</span></div>
+          <div class="metric"><strong>0.61 -> 0.01</strong><span>Crisis correlation calibration gap</span></div>
+        </div>
+      </section>
+      <aside class="card">
+        <h2>Tools</h2>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">Normalizing Flows</span>
+          <span class="tag">CVaR</span>
+          <span class="tag">UQ</span>
+          <span class="tag">Finance</span>
+        </div>
+        <h2 style="margin-top:18px">Links</h2>
+        <div class="links">
+          <a href="https://github.com/Xander-Coles/market-shocks" target="_blank" rel="noopener">GitHub</a>
+          <a href="/assets/docs/market-shocks-final-report.pdf" target="_blank" rel="noopener">Full Report (PDF)</a>
+          <a href="/assets/docs/market-shocks-final-presentation.pdf" target="_blank" rel="noopener">Presentation (PDF)</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
